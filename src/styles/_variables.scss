@@ -1,0 +1,18 @@
+// Body colors
+$primary-background: #121212;
+
+// Text colors
+$text-color: #e8e8e8;
+$link-color: #007bff;
+
+// Footer Colors
+$footer-border-top-color: black;
+$footer-background: #0c0c0c;
+$footer-bottom-background: $footer-background;
+$footer-text-color: #9b9b9b;
+
+// Footer Sizing
+$footer-top-height: 80px;
+$footer-bottom-height: 40px;
+$footer-height: $footer-top-height + $footer-bottom-height;
+$footer-github-width: 100px;
