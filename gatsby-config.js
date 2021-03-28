@@ -6,6 +6,10 @@ module.exports = {
     description: `its_meow's Gatsby Starter`,
     author: `itsmeow`,
   },
+  flags: {
+    DEV_SSR: true,
+    FAST_DEV: true,
+  },
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
@@ -27,7 +31,8 @@ module.exports = {
         anonymize: false,
       },
     },
-    `gatsby-image`,
+    `gatsby-plugin-image`,
+    `babel-preset-gatsby`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

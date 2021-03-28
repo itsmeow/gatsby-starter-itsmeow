@@ -1,5 +1,3 @@
-import React from "react"
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import ClientOnly from "../components/clientonly"
@@ -16,7 +14,7 @@ const IndexPage = () => {
           <hr />
           <h2>Client Only Example</h2>
           <ClientOnly>
-            <p>{window.location.href}</p>
+            <p>{typeof window !== "undefined" ? window.location.href : ""}</p>
           </ClientOnly>
           <hr />
           <Link to="/exchange">Exchange Rates Page</Link>

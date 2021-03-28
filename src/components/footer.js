@@ -1,31 +1,19 @@
-import React from "react"
 import { Link } from "gatsby"
-import { graphql, useStaticQuery } from "gatsby"
-import Img from "gatsby-image"
+import { StaticImage } from "gatsby-plugin-image"
 import { FaGithub } from "react-icons/fa"
 
 const Footer = () => {
-  const { modsLogo } = useStaticQuery(
-    graphql`
-      query {
-        modsLogo: file(relativePath: { eq: "modslogo.png" }) {
-          childImageSharp {
-            fixed(width: 211, height: 60) {
-              ...GatsbyImageSharpFixed
-            }
-          }
-        }
-      }
-    `
-  )
   return (
     <footer>
       <div className="topfooter">
         <Link to="/" className="link-no-style">
-          <Img
+          <StaticImage
+            src="./../data/modslogo.png"
             alt="itsmeow mods logo"
-            fixed={modsLogo.childImageSharp.fixed}
-          ></Img>
+            layout="fixed"
+            width={211}
+            height={60}
+          ></StaticImage>
         </Link>
         <div className="github">
           <a
